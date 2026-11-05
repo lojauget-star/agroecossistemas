@@ -1,47 +1,40 @@
 # Agroecossistemas | Resenha crítica interativa
 
-Apresentação de 11 slides sobre **Bowness et al. (2025), _Beyond redistribution: a framework for reparative just transitions_**, organizada como projeto Vite.
+Apresentação interativa de **11 slides** sobre Bowness et al. (2025), *Beyond redistribution: a framework for reparative just transitions*, usando Vite.
 
 ## Rodar localmente
-
-Requer Node.js 20.19+ ou 22.12+.
 
 ```bash
 npm install
 npm run dev
 ```
 
-Abra o endereço local informado pelo Vite (normalmente `http://localhost:5173`).
+## Publicação na Netlify
 
-## Compilar para produção
+- Conectar o repositório `lojauget-star/agroecossistemas` à Netlify.
+- Branch: `main`; build command: `npm run build`; publish directory: `dist`.
+- O arquivo `netlify.toml` já contém os dois últimos parâmetros.
 
-```bash
-npm run build
-npm run preview
-```
+## Publicação no GitHub Pages
 
-A pasta `dist/` está pronta para hospedagem estática. O arquivo `netlify.toml` define o build para Netlify.
+- GitHub > Settings > Pages > Build and deployment > Source: **GitHub Actions**.
+- O workflow `.github/workflows/deploy-pages.yml` instala, compila e publica automaticamente ao dar push na `main`.
+- URL esperada após o sucesso do deploy: `https://lojauget-star.github.io/agroecossistemas/`.
 
-## Estrutura
+## Arquivos
 
 - `index.html`: 11 slides, conteúdo e notas de fala.
-- `src/style.css`: identidade visual verde escura, layouts, imagens e transições.
-- `src/main.js`: navegação por slides, teclado, toque, tela cheia e notas.
-- `public/mundau.png`: imagem original incluída localmente para evitar links de imagem quebrados.
+- `src/style.css`: identidade verde-escura, imagem de fundo e transições.
+- `src/main.js`: navegação por slides, atalhos, toque, tela cheia e notas.
+- `public/mundau.png`: fotografia incluída localmente.
 
 ## Controles
 
-- `←` / `→` ou `Page Up` / `Page Down`: navegar.
-- `N`: abrir ou fechar as notas.
-- `F`: tela cheia.
-- `P`: imprimir.
-- `Home` / `End`: primeiro / último slide.
-
-A numeração também é preservada na URL pelo formato `#slide-1` até `#slide-11`.
+- `←` / `→` ou `Page Up` / `Page Down`: avançar ou voltar.
+- `N`: notas; `F`: tela cheia; `P`: imprimir.
 
 ## Referência
 
-Bowness, E. et al. (2025). _Beyond redistribution: a framework for reparative just transitions_. **Environmental Research Letters**, 20, 094058. https://doi.org/10.1088/1748-9326/adf905
+Bowness, E. et al. (2025). *Beyond redistribution: a framework for reparative just transitions*. **Environmental Research Letters**, 20, 094058. https://doi.org/10.1088/1748-9326/adf905
 
-Fotografia de referência da Barra do Mundaú: [Viagens e Caminhos](https://www.viagensecaminhos.com/wp-content/uploads/2025/10/mundau.jpg).
-"# agroecossistemas" 
+Fotografia da Barra do Mundaú: [Viagens e Caminhos](https://www.viagensecaminhos.com/wp-content/uploads/2025/10/mundau.jpg).
